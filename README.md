@@ -11,9 +11,11 @@ Raspberry en la terraza como servidor de impresión red y airprint y backup de d
 ##	Riego con RaspberryPi
 ###		Raspberry terraza: 
 GPIO para leer si hay agua y encender el motor .
-Hay un script corriendo en python[ART_MQTTv3.py](https://github.com/jmartinz/ART/blob/master/ART_MQTTv3.py) que se suscribe a dos mensajes el broker MQTT del salón.
+Hay un script corriendo en python [ART_MQTTv3.py](https://github.com/jmartinz/ART/blob/master/ART_MQTTv3.py) que se suscribe a dos mensajes el broker MQTT del salón:
+* mqtt_topic_req_read="/home/ter/ART/req_read"     # Topic with request to read water repository state
+* mqtt_topic_req_water="/home/ter/ART/req_water" 	# Topic with request to water 
 
 ###	Raspberry salón: 
-•	Mosquito (MQTT)
-•	Node-RED:
+*	Mosquito (MQTT)
+*	Node-RED:
 ![ART Node red flow](https://github.com/jmartinz/ART/blob/master/img/node-red_jmmp_20150201.png)
